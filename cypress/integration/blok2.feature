@@ -1,7 +1,7 @@
 Feature: Centrum.sk mailbox sign in, send message and sign out
 
     This feature demonstrates scenarios of a user signing into his mailbox,
-    sending a message to a contact and signing out of the mailbox
+    sending a message to a contact and signing out of the mailbox.
 
     Scenario: Signing into centrum.sk mailbox, sending a message and signing off
 

@@ -6,12 +6,14 @@ const password = Cypress.env('password')
 const getIframeDocument = () => {
   return cy
   .get('iframe[id="mail_composer_body_ifr"]')
-  .its('0.contentDocument').should('exist')
+  .its('0.contentDocument')
+      .should('exist')
 }
 
 const getIframeBody = () => {
   return getIframeDocument()
-  .its('body').should('not.be.undefined')
+  .its('body')
+      .should('not.be.undefined')
   .then(cy.wrap)
 }
 
@@ -60,23 +62,27 @@ When("user clicks button {string}",
 
 And("populates Komu: field with {string}",
     (contact) => {
+    cy.get('#qcontact_0').click({force: true})
     cy.get('#smart_input_to')
         .type(contact)
     })
 
 And("populates Predmet: field with {string}",
     (subject) => {
-    cy.get('#subject_input').type(subject)
+    cy.get('#subject_input')
+        .type(subject)
     })
 
 And("populates Body of the message with {string}",
     (message) => {
-    getIframeBody().type(message)
+    getIframeBody()
+        .type(message)
     })
 
 And("clicks Pridať prílohu button to upload {string} attachment",
     (file) => {
-    cy.get('#mc_attachments_add').attachFile(file)
+    cy.get('#mc_attachments_add')
+        .attachFile(file)
     })
 
 And("clicks button {string}",

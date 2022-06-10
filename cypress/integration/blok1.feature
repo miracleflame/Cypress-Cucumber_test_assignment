@@ -1,7 +1,7 @@
 Feature: Centrum.sk mailbox sign in and sign out
 
     This feature demonstrates scenarios of a user signing into his mailbox
-    and signing out of the mailbox
+    and signing out of the mailbox.
 
     Scenario: Signing into centrum.sk mailbox and signing off
 
